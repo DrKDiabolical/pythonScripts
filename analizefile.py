@@ -1,5 +1,4 @@
-print("Welcome to file analizer V0.3")
-filename = input("Please enter a file name to analize: ")
+import sys
 
 def count_char(text, char):
     count = 0
@@ -29,7 +28,7 @@ def count_words(text):
     return(len(words))
 
 while True:
-    with open(filename, "r") as f:
+    with open(str(sys.argv[1]), "r") as f:
         text = f.read()
 
         print("Please enter a command:")
